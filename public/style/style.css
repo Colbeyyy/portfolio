@@ -37,6 +37,7 @@ div {
     height: 70px;
     background: rgba(255, 255, 255, 0.1);
     position: absolute;
+    z-index: 1000;
 }
 
 .navbar .wrapper {
@@ -91,6 +92,10 @@ div {
     position: relative;
 }
 
+#landing {
+    height: 100vh;
+}
+
 #landing h1 {
     width: 100%;
     text-align: center;
@@ -120,22 +125,22 @@ div {
 }
 
 #landing a {
-    padding: 10px 80px;
+    padding: 10px 40px;
     padding-bottom: 15px;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0px -3px;
     border-radius: 3px;
     font-size: 22px;
     transition: all .25s;
-    box-shadow: inset 0px 0px 0px 3px white;
+    box-shadow: inset 0px 0px 0px 3px rgb(186, 207, 230);
     background: rgba(0, 0, 0, 0);
-    color: white;
-    font-weight: 400;
-    opacity: 0.5;
+    color: rgb(186, 207, 230);
+
 }
 
 #landing a:hover {
-    color: #769fce;
+    color: white;
     background: white;
-    opacity: 1;
+    box-shadow: inset 0px 0px 0px 3px white;
+    z-index: 100;
 }

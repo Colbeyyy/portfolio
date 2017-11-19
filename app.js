@@ -1,11 +1,12 @@
-var express = require('express');
-var handlebars = require('express-handlebars');
-var app = express();
-var bodyParser = require('body-parser');
-var path = require('path');
-var passport = require('passport');
-var session = require('express-session');
-var DiscordAuth = require('passport-discord').Strategy;
+const express = require('express')
+    , handlebars = require('express-handlebars')
+    , app = express()
+    , bodyParser = require('body-parser')
+    , path = require('path')
+    , passport = require('passport')
+    , session = require('express-session')
+    , DiscordAuth = require('passport-discord').Strategy
+    , refresh = require('passport-oauth2-refresh');
 
 const config = require('./config.json');
 
@@ -17,19 +18,24 @@ passport.deserializeUser((obj, done) => {
     done(null, obj);
 });
 
-passport.use(new DiscordAuth({
+const discordStrat = new DiscordAuth({
     clientID: '378614988388040704',
     clientSecret: 'y4laqaVUZoW-Q8MZSoG2Js2ZJ_2pM8lv',
-    callbackURL: 'http://creative-logic.org/auth/callback',
+    callbackURL: 'http://localhost:8080/auth/callback',
     scope: [
         'identify',
         'guilds',
     ]
 }, (accessToken, refreshToken, profile, done) => {
     process.nextTick(() => {
+        profile.refreshToken = refreshToken;
         return done(null, profile);
     });
-}))
+})
+
+passport.use(discordStrat);
+
+refresh.use(discordStrat);
 
 app.use(session({
     secret: config.secret,
@@ -45,8 +51,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/public'));
 
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+app.engine('.hbs', handlebars({extname: '.hbs', defaultLayout: 'main'}));
+app.set('view engine', '.hbs');
 
 app.use(require('./routes'));
 

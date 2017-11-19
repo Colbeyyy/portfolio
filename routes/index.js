@@ -2,7 +2,11 @@ var router = require('express').Router();
 
 router.get('/', (req, res) =>
 {
-    res.render('home');
+    console.log(req.user);
+    res.render('home',{
+        user: req.user,
+        loggedIn: req.isAuthenticated()
+    });
 });
 
 module.exports = router;

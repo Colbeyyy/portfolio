@@ -9,10 +9,7 @@ module.exports = (passport) => {
 
   router.get('/auth', passport.authenticate('discord', { scope: ['identify','guilds']}));
   
-  router.get('/auth/callback', passport.authenticate('discord', { failureRedirect: '/'}), (req, res) =>
-  {
-    res.redirect('/');
-  });
+  router.get('/auth/callback', passport.authenticate('discord', { failureRedirect: '/'}), (req, res) => { res.redirect('/'); });
 
   return router;
 };

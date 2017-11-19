@@ -20,7 +20,7 @@ passport.deserializeUser((obj, done) => {
 passport.use(new DiscordAuth({
     clientID: '378614988388040704',
     clientSecret: 'y4laqaVUZoW-Q8MZSoG2Js2ZJ_2pM8lv',
-    callbackURL: 'http://localhost:3000/auth/callback',
+    callbackURL: 'http://creative-logic.org/auth/callback',
     scope: [
         'identify',
         'guilds',

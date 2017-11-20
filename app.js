@@ -21,7 +21,7 @@ passport.deserializeUser((obj, done) => {
 const discordStrat = new DiscordAuth({
     clientID: '378614988388040704',
     clientSecret: 'y4laqaVUZoW-Q8MZSoG2Js2ZJ_2pM8lv',
-    callbackURL: 'http://localhost:8080/auth/callback',
+    callbackURL: 'http://creative-logic.org/auth/callback',
     scope: [
         'identify',
         'guilds',

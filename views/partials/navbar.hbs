@@ -1,0 +1,39 @@
+<div class="navbar">
+    <div class="wrapper">
+        <a href='' id="logo-btn">
+            <div class="logo"></div>
+            <h1>Creative Logic</h1>
+        </a>
+        <form action="/search">
+            <input type="text" name="query" placeholder="Search">
+            <button><i class="fa fa-search fa-1x fa-inverse" aria-hidden="true"></i></button>
+        </form>
+        <div class="spacer"></div>
+        <div class="button-container">
+            {{#if loggedIn}}
+                <a href="/notifications"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                <button onclick="toggleUserMenu()"><img src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.jpg"></button>
+            {{else}}
+                <a href='#'>Top User</a>
+                <a href='#'>Community</a>
+                <div class="join-container">
+                    <a href='https://discord.gg/xVJ8B7k' id="join">Join</a>
+                    <a href='/auth'>Login</a>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+
+    {{#if loggedIn}}
+        <div class="hidden" id="user-menu">
+            <div class="info">
+                <img src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.jpg">
+                <h1>{{user.username}}</h1>
+            </div>
+            <a href="/profile"><i class="fa fa-user fa-inverse" aria-hidden="true" style="margin-right: 20px;"></i>Profile</a>
+            <a href="/servers"><i class="fa fa-server fa-inverse" aria-hidden="true" style="margin-right: 16px;"></i>Servers</a>
+            <a href="/settings"><i class="fa fa-gear fa-inverse" aria-hidden="true" style="margin-right: 18px;"></i>Settings</a>
+            <a href="/logout"><i class="fa fa-sign-out fa-inverse" aria-hidden="true" style="margin-right: 18px;"></i>Sign Out</a>
+        </div>
+    {{/if}}
+</div>

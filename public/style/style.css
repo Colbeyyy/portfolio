@@ -1,5 +1,5 @@
 body {
-    background: #769fce;
+    background: #57577d;
     margin: 0;
     padding: 0;
 }
@@ -19,6 +19,10 @@ div {
     display: inline-block;
 }
 
+input:focus, button:focus {
+    outline: none;
+}
+
 .spacer {
     display: block;
     margin: auto;
@@ -35,124 +39,263 @@ div {
 .navbar {
     width: 100%;
     height: 70px;
-    background: rgba(255, 255, 255, 0.1);
-    position: absolute;
+    background: #252525;
+    position: fixed;
     z-index: 1000;
 }
 
 .navbar .wrapper {
     display: flex;
     flex-direction: row;
-}
-
-.navbar .logo {
-    background: url('../images/logo.png');
-    width: 60px;
-    height: 60px;
-    top: 5px;
-    background-size: cover;
-    position: relative;
+    width: 90%;
+    left: 5%;
 }
 
 .navbar h1 {
-    font-size: 28px;
+    font-size: 22px;
     margin: 0px 20px;
-    padding: 16px 0px;
+    padding: 18px 0px;
+    color: white;
 }
 
-.navbar .button-container
-{
-    display: inline-block;
-    height: 100%;
-    margin: 0px 15px;
-    position: relative;
-    top: -25px;
+.navbar .logo {
+    width: 48px;
+    height: 48px;
+    background: url('../images/logo.png');
+    background-size: cover;
+    margin: 11px 0px;
 }
 
-.navbar .button-container a {
-    font-size: 14px;
-    margin: 0px -2px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 25px 10px;
-    transition: opacity 0.25s;
+.navbar #logo-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar form {
+    display: inline-flex;
+    flex-direction: row;
+    height: 30px;
+    margin: 20px 10px;
+    margin-left: 60px;
+}
+
+.navbar input[type="text"] {
+    padding: 5px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    width: 500px;
+    background: #2d2d2d;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar button {
+    border: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 0px 40px;
+    background: #313131;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.navbar button:hover {
+    background: #212121
+}
+
+.navbar .button-container {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    margin: 20px 0px;
+}
+
+.navbar .button-container a{
+    font-size: 13.33px;
+    padding: 5px 0px;
+    margin-right: 20px;
     opacity: 1;
+    transition: opacity .25s;
 }
 
-.navbar a img{
-    border-radius: 100%;
+.navbar .button-container a:hover{
+    opacity: 0.7;
+}
+
+.navbar .button-container button{
     padding: 0;
-    margin: 0;
-    width: 40px;
-    position: relative;
-    display: inline-block;
-    top: 15px;
-    left: 20px;
 }
 
-.navbar .button-container a:hover {
-    opacity: 0.5;
+.navbar .button-container img{
+    width: 40px;
+    border-radius: 100%;
+    position: relative;
+    top: -5px;
+}
+
+.navbar .join-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .join-container a {
+    background: #2d2d2d;
+    padding: 5px 20px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0;
+    
+}
+
+.navbar .join-container a#join {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: #313131;
+}
+
+.navbar .user-menu {
+    width: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    background: #252525;
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    box-shadow: 0px 3px 20px black;
+}
+
+.navbar .user-menu a {
+    padding: 10px 30px;
+    font-size: 13px;
+    background: transparent;
+    transition: background 0.25s;
+}
+
+.navbar .user-menu a:hover {
+    padding: 10px 30px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.navbar .user-menu a i{
+    margin-right: 20px;
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.navbar .user-menu .info {
+    height: 40px;
+    background: #2d2d2d;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0px;
+}
+
+.navbar .user-menu .info img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.navbar .user-menu .info h1 {
+    padding: 10px 0px;
+    font-size: 15px;
 }
 
 .container {
     width: 100%;
-    position: relative;
 }
 
-.content {
+section {
+    display: inline-block;
     width: 100%;
-    position: relative;
+}
+
+section .wrapper {
+    height: 100%;
 }
 
 #landing {
     height: 100vh;
 }
 
-#landing h1 {
+#landing .wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing h1, #landing h2 {
     width: 100%;
     text-align: center;
-    display: block;
-    font-size: 72px;
-    margin-top: 33vh;
-    margin-bottom: 10px;
-}
-
-#landing h2 {
-    width: 100%;
-    text-align: center;
-    display: block;
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-#landing .line {
-    display: block;
-    margin: 0 auto;
-    width: 550px;
-    height: 5px; 
-    background: white;
-    border-radius: 20px;
-    opacity: 0.5;
-}
-
-#landing a {
-    padding: 10px 40px;
-    padding-bottom: 15px;
     display: inline-block;
-    margin: 0px -3px;
-    border-radius: 3px;
-    font-size: 22px;
-    transition: all .25s;
-    box-shadow: inset 0px 0px 0px 3px rgb(186, 207, 230);
-    background: rgba(0, 0, 0, 0);
-    color: rgb(186, 207, 230);
-
 }
 
-#landing a:hover {
-    color: white;
+#landing h1 {
+    font-size: 56px;
+}
+
+#landing .join-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 43px;
+}
+
+#landing .join-container a {
+    background: #2d2d2d;
+    padding: 10px 20px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: opacity .25s;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#landing .join-container a:hover {
+    opacity: 0.7;
+}
+
+#landing .join-container a#join {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: #313131;
+}
+
+#video {
     background: white;
-    box-shadow: inset 0px 0px 0px 3px white;
-    z-index: 100;
+    height: 300px;
+}
+
+#video video {
+    margin: 0 auto;
+    display: block;
+    top: -200px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.splitter {
+    width: 100%;
+    display: block;
+    height: 0;
+}
+
+.splitter video {
+
 }

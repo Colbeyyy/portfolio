@@ -1,22 +1,20 @@
-{{#if loggedIn}}
-    {{>innav}}
-{{else}}
-    {{>outnav}}
-{{/if}}
+{{>navbar}}
 
 <div class="container">
-    <div class="content" id="landing">
+    <section id="landing">
         <div class="wrapper">
             <h1>Creative Logic</h1>
             <div class="line"></div>
             <h2>Discord Community and Powerful Discord Bot</h2>
-            <div style="text-align: center; display: block;">
-                <a href="https://discord.gg/97tn3bW">Join</a>
-                <a href="https://discord.gg/97tn3bW">Add</a>
+            <div class="join-container" >
+                <a href="https://discord.gg/97tn3bW" id="join">Join Server</a>
+                <a href="https://discord.gg/97tn3bW">Login with <img src="images/Discord-Wordmark-White.svg" width="100px"></a>
             </div>
         </div>
-    </div>
-    <div class="content" style="height: 300px; background: white">
-
-    </div>
+    </section>
+    <section id="video">
+        <video preload="true" autoplay loop width="1280">
+            <source src="https://dl.dropboxusercontent.com/s/ctlbehka6apvang/2017-11-20_04-04-52.mp4" type="video/mp4">
+        </video>
+    </section>
 </div>

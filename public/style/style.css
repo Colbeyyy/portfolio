@@ -76,7 +76,18 @@ input:focus, button:focus {
     flex-direction: row;
     height: 30px;
     margin: 20px 10px;
-    margin-left: 60px;
+    margin-left: 3vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar form {
+        margin-left: 0px;
+    }
+
+    .navbar .wrapper {
+        width: 95%;
+        left: 2.5%;
+    }
 }
 
 .navbar input[type="text"] {
@@ -85,7 +96,7 @@ input:focus, button:focus {
     border: none;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    width: 500px;
+    width: 30vw;
     background: #2d2d2d;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -290,12 +301,13 @@ section .wrapper {
     border-radius: 5px;
 }
 
+#top-user {
+    height: 800px;
+    background: #1d1d1d;
+}
+
 .splitter {
     width: 100%;
     display: block;
     height: 0;
-}
-
-.splitter video {
-
 }

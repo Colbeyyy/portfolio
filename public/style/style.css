@@ -246,11 +246,10 @@ section {
 
 #landing {
     height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 150vw;
 }
 
 #landing h1, #landing h2 {
@@ -261,19 +260,6 @@ section {
 
 #landing h1 {
     font-size: 56px;
-}
-
-#landing .heading {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#landing video {
-    border-radius: 5px;
-    position: relative;
-    left: 200px;
 }
 
 #landing .join-container {

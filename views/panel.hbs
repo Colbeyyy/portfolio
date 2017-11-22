@@ -1,11 +1,14 @@
-<div class="servers-container">
-    {{#each guilds}}
-        <a href="/server/{{this.id}}">
-            <div class="header">
-                <h1>{{this.name}}</h1>
-                <img src="https://cdn.discordapp.com/icons/{{this.id}}/{{this.icon}}.png">
-
-            </div>
-        </a>
-    {{/each}}
+<div class="panel">
+    <div class="sidebar">
+        <button class="active" style="margin-top: 70px"><i class="fa fa-user fa-inverse fa-2x" aria-hidden="true"></i></button>
+        <button><i class="fa fa-server fa-inverse fa-2x" aria-hidden="true"></i></button>
+        <div class="spacer"></div>
+        <button><i class="fa fa-gear fa-inverse fa-2x" aria-hidden="true"></i></button>
+        <a href="/logout"><i class="fa fa-sign-out fa-inverse fa-2x" aria-hidden="true"></i></a>
+    </div>
+    <div class="switcher">
+        <div class="profile">
+            
+        </div>
+    </div>
 </div>

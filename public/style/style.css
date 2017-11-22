@@ -87,17 +87,6 @@ span {
     margin-left: 3vw;
 }
 
-@media screen and (max-width: 1200px) {
-    .navbar form {
-        margin-left: 0px;
-    }
-
-    .navbar .wrapper {
-        width: 95%;
-        left: 2.5%;
-    }
-}
-
 .navbar input[type="text"] {
     padding: 5px;
     padding-left: 15px;
@@ -539,4 +528,24 @@ section {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1306px) {
+    .navbar form {
+        margin-left: 0px;
+    }
+
+    .navbar .wrapper {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .navbar input[type="text"] {
+        width: 20vw;
+    }
+
+    #landing {
+        height: 800px;
+    }
 }

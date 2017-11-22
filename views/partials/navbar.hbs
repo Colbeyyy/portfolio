@@ -11,11 +11,14 @@
         <div class="spacer"></div>
         <div class="button-container">
             {{#if loggedIn}}
+                <a href='https://github.com/CreativeLogic/Discord-Bot' style="padding: 3px 0px;"><i class="fa fa-github fa-inverse fa-2x" aria-hidden="true" ty></i></a>
                 <a href="/notifications"><i class="fa fa-bell" aria-hidden="true"></i></a>
-                <button onclick="toggleUserMenu()"><img src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.jpg"></button>
+                <button onclick="toggleUserMenu()" class="dropBtn"><img class="dropBtn" src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.png"></button>
             {{else}}
-                <a href='#'>Top User</a>
-                <a href='#'>Community</a>
+                <a href='#top-user'>Top User</a>
+                <a href='#community'>Community</a>
+                <a href='#bot'>Bot</a>
+                <a href='https://github.com/CreativeLogic/Discord-Bot' style="padding: 3px 0px;"><i class="fa fa-github fa-inverse fa-2x" aria-hidden="true" ty></i></a>
                 <div class="join-container">
                     <a href='https://discord.gg/xVJ8B7k' id="join">Join</a>
                     <a href='/auth'>Login</a>
@@ -27,7 +30,7 @@
     {{#if loggedIn}}
         <div class="hidden" id="user-menu">
             <div class="info">
-                <img src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.jpg">
+                <img src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.png">
                 <h1>{{user.username}}</h1>
             </div>
             <a href="/profile"><i class="fa fa-user fa-inverse" aria-hidden="true" style="margin-right: 20px;"></i>Profile</a>

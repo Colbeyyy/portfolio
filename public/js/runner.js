@@ -1,5 +1,7 @@
 const userMenu = document.getElementById('user-menu');
-userMenu.open = false;
+if (userMenu) {
+    userMenu.open = false;
+}
 
 function toggleUserMenu() {
 
@@ -14,4 +16,12 @@ function toggleUserMenu() {
         }
     }
 
+}
+
+window.onclick = (event) => {
+    if (!event.target.matches('.dropBtn') && userMenu.open) {
+
+        toggleUserMenu();
+        console.log('test');
+    }
 }

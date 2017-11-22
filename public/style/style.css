@@ -2,6 +2,7 @@ body {
     background: #57577d;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,p,a {
@@ -13,6 +14,7 @@ h1,h2,h3,p,a {
     text-decoration: none;
     position: relative;
     font-weight: 400;
+    text-align: center;
 }
 
 div {
@@ -21,6 +23,10 @@ div {
 
 input:focus, button:focus {
     outline: none;
+}
+
+span {
+    font-weight: 600;
 }
 
 .spacer {
@@ -35,6 +41,8 @@ input:focus, button:focus {
     position: relative;
     display: block;
 }
+
+/* NAVBAR */
 
 .navbar {
     width: 100%;
@@ -114,6 +122,10 @@ input:focus, button:focus {
 
 .navbar button:hover {
     background: #212121
+}
+
+.navbar button.dropBtn {
+    background: none;
 }
 
 .navbar .button-container {
@@ -224,28 +236,21 @@ input:focus, button:focus {
     font-size: 15px;
 }
 
-.container {
-    width: 100%;
-}
-
 section {
-    display: inline-block;
+    display: inline-flex;
     width: 100%;
+    
 }
 
-section .wrapper {
-    height: 100%;
-}
+/* LANDING */
 
 #landing {
     height: 100vh;
-}
-
-#landing .wrapper {
-    display: inline-flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    display: flex;
     justify-content: center;
+    width: 150vw;
 }
 
 #landing h1, #landing h2 {
@@ -256,6 +261,19 @@ section .wrapper {
 
 #landing h1 {
     font-size: 56px;
+}
+
+#landing .heading {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing video {
+    border-radius: 5px;
+    position: relative;
+    left: 200px;
 }
 
 #landing .join-container {
@@ -288,26 +306,251 @@ section .wrapper {
     background: #313131;
 }
 
-#video {
-    background: white;
+/* Bot Info */
+
+#bot-info {
+    background: #1d1d1d;
     height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#video video {
-    margin: 0 auto;
+#bot-info video {
     display: block;
-    top: -200px;
     position: relative;
     border-radius: 5px;
 }
 
-#top-user {
-    height: 800px;
-    background: #1d1d1d;
+#bot-info h1 {
+    color: white;
+    font-size: 32px;
+    margin: 0px 60px;
 }
 
-.splitter {
-    width: 100%;
+/* Top User */
+
+#top-user {
+    background: #f5f5f5;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+#top-user h1 {
+    color: black;
+    font-size: 56px;
+}
+
+#top-user .user{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+#top-user .name-container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 20px;
+}
+
+#top-user a{
+    color: black;
+    margin: 0px 10px;
+}
+
+#top-user .connections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-user img {
+    width: 300px;
+    border-radius: 5px;
+    margin: 30px;
     display: block;
-    height: 0;
+}
+
+#top-user .user img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 0;
+}
+
+#top-user .art-container {
+    display: inline-flex;
+    display: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Community */
+
+
+#community {
+    background: rgb(44, 44, 44);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+#community h1 {
+    font-size: 30px;
+}
+
+#community a {
+    margin: 40px;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    transition: background 0.25s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#community a img {
+    margin-left: 5px;
+}
+
+#community a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Bot */
+
+#bot {
+    background: #ff2d50;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+ #bot .feature-list {
+    display: inline-flex;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ #bot .feature-list .feature {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+#bot .feature-list .feature h2 {
+    font-size: 20px;
+    width: 120px;
+}
+
+#bot a {
+    margin: 40px;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    transition: background 0.25s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bot a img {
+    margin: 0px 5px;
+}
+
+#bot a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.servers-container {
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 70px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ececec;
+}
+
+.servers-container a{
+    background: #1d1d1d;
+    display: inline-flex;
+    flex-direction: column;
+    color: black;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 30px;
+    border-radius: 5px;
+    flex-flow: space-between;
+    
+}
+
+.servers-container .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 0px;
+}
+
+.servers-container .header h1 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 0px 10px;
+}
+
+.servers-container .header img {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    margin: 0px 10px;
+}
+
+.footer {
+    display: inline-flex;
+    width: 100%;
+    background: #1f1f1f;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h1 {
+    font-size: 15px;
+    padding: 50px 0px;
+}
+
+.footer a {
+    color: #57577d;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

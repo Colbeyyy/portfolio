@@ -1,3 +1,11 @@
-{{>navbar}}
+<div class="servers-container">
+    {{#each guilds}}
+        <a href="/server/{{this.id}}">
+            <div class="header">
+                <h1>{{this.name}}</h1>
+                <img src="https://cdn.discordapp.com/icons/{{this.id}}/{{this.icon}}.png">
 
-<h1 style="width: 100%; text-align: center; top: 300px; display: block; font-size: 72px;">Under Construction</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>

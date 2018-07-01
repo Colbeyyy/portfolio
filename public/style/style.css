@@ -569,7 +569,7 @@ section {
 }
 
 #contact h1 {
-    color: black;
+    color: #333;
     font-size: 56px;
 }
 
@@ -588,7 +588,7 @@ section {
 }
 
 #contact a{
-    color: black;
+    color: #333;
     margin: 0px 10px;
 }
 
@@ -622,7 +622,7 @@ section {
 }
 
 .summary h2 {
-    color: black;
+    color: #333;
     font-size: 24px;
     font-weight: 600;
     width: 100%;
@@ -631,7 +631,7 @@ section {
 
 .summary p {
     text-align: left;
-    color: black;
+    color: #333;
     word-wrap: break-word;
 }
 

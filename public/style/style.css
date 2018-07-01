@@ -27,6 +27,10 @@ div {
     display: inline-block;
 }
 
+i {
+    transition: color .25s;
+}
+
 button {
     cursor: pointer;
     display: flex;
@@ -629,6 +633,50 @@ section {
     text-align: left;
     color: black;
     word-wrap: break-word;
+}
+
+.fa-steam:hover {
+    color: #555;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+}
+
+.fa-facebook-f:hover {
+    color: #3B5998;
+}
+
+.fa-browser:hover {
+    color: #a9bdef;
+}
+
+.fa-discord:hover {
+    color: #7289DA;
+}
+
+.fa-youtube:hover {
+    color: #ff0000;
+}
+
+.fa-twitch:hover {
+    color: #6441A4;
+}
+
+.fa-kickstarter-k:hover {
+    color: #034752;
+}
+
+.fa-github:hover {
+    color: #4078c0;
+}
+
+.fa-envelope:hover {
+    color: #a9bdef;
+}
+
+.fa-linkedin:hover {
+    color: #0077B5;
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Creative Logic</title>
+        <title>Colby Hall - Game Developer</title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
-        <meta property="og:title" content="The Rock" />
-        <meta property="og:type" content="video.movie" />
-        <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+        <meta property="og:title" content="Colby Hall: Portfolio" />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
         <meta charset="utf-8" />
-        <script src="https://use.fontawesome.com/7079cd184a.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-87DrmpqHRiY8hPLIr7ByqhPIywuSsjuQAfMXAE0sMUpY3BM7nXjf+mLIUSvhDArs" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121684793-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121684793-1');
+        </script>
+
     </head>
     <body>
         {{>navbar}}
@@ -24,7 +34,7 @@
             $("a[href^='#']").click(function(e) {
                 e.preventDefault();
                 
-                var position = $($(this).attr("href")).offset().top;
+                var position = $($(this).attr("href")).offset().top - (window.innerHeight / 2);
                 
                 $("body, html").animate({
                     scrollTop: position

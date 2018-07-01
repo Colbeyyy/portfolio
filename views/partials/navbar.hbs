@@ -1,27 +1,14 @@
 <nav>
-    <a href='/' id="logo-btn">
-        <div class="logo"></div>
-        <h1>Creative Logic</h1>
-    </a>
-    <form action="/search">
-        <input type="text" name="query" placeholder="Search" autofocus autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
-        <button><i class="fa fa-search fa-1x fa-inverse" aria-hidden="true"></i></button>
-    </form>
-    <div class="spacer"></div>
-    <div class="button-container">
-        {{#if loggedIn}}
-            <a href='https://github.com/CreativeLogic/Discord-Bot' style="padding: 3px 0px;"><i class="fa fa-github fa-inverse fa-2x" aria-hidden="true" ty></i></a>
-            <a href="/notifications"><i class="fa fa-bell" aria-hidden="true"></i></a>
-            <button onclick="toggleUserMenu()" class="dropBtn"><img class="dropBtn" src="https://cdn.discordapp.com/avatars/{{user.id}}/{{user.avatar}}.png"></button>
-        {{else}}
-            <a href='#top-user'>Top User</a>
-            <a href='#community'>Community</a>
-            <a href='#bot'>Bot</a>
-            <a href='https://github.com/CreativeLogic/Discord-Bot' style="padding: 3px 0px;"><i class="fa fa-github fa-inverse fa-2x" aria-hidden="true" ty></i></a>
-            <div class="join-container">
-                <a href='https://discord.gg/xVJ8B7k' id="join">Join</a>
-                <a href='/auth'>Login</a>
-            </div>
-        {{/if}}
+    <div class="wrapper">
+        <a href='/' id="logo-btn">
+            <div class="logo"></div>
+        </a>
+        <div class="spacer"></div>
+        <div class="button-container">
+            <a href='#about'>About</a>
+            <a href='#projects'>Projects</a>
+            <a href='#skills'>Skills</a>
+            <a href='#contact'>Contact</a>
+        </div>
     </div>
 </nav>

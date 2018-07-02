@@ -241,6 +241,27 @@ section {
     background: #313131;
 }
 
+#landing a {
+    position: relative;
+    top: 30%;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: solid 3px #333;
+    color: black;
+    transition: all .25s;
+}
+
+#landing a:hover {
+    background: black;
+    color: white;
+}
+
+#landing a i {
+    margin: 0px 10px;
+    font-size: 16px;
+    transition: none;
+}
+
 /* Bot Info */
 
 #bot-info {
@@ -425,6 +446,32 @@ section {
     margin-bottom: 10px;
 }
 
+.project ul {
+    width: 60%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.project .awards-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+
+.project iframe {
+    position: relative;
+    left: 20%;
+}
+
+.project .awards-list img {
+    width: 100px;
+}
+
+.project ul li {
+    font-family: "Open Sans", sans-serif;
+}
+
 .project .social-container {
     width: 60%;
     display: flex;
@@ -469,6 +516,8 @@ section {
     padding: 20px;
     margin: 20px;
     max-width: 400px;
+    border-bottom: solid 4px rgba(255, 255, 255, 0.3);
+    border-top: solid 4px rgba(255, 255, 255, 0.3);
 }
 
 #skills .skill-list .skill h2 {
@@ -482,9 +531,18 @@ section {
     text-align: left;
 }
 
+.skill ul {
+    padding-left: 18px;
+}
+
+.skill ul li {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
 /* Footer */
 
-.footer {
+footer {
     display: inline-flex;
     width: 100%;
     background: #1f1f1f;
@@ -492,16 +550,16 @@ section {
     align-items: center;
 }
 
-.footer h1 {
+footer h1 {
     font-size: 15px;
     padding: 50px 0px;
 }
 
-.footer a {
+footer a {
     color: #a9bdef;
 }
 
-.footer a:hover {
+footer a:hover {
     text-decoration: underline;
 }
 
@@ -679,10 +737,38 @@ section {
     color: #0077B5;
 }
 
+#resume {
+    background: linear-gradient(#333, #ff5656);
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+#resume a {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    margin: 20px 0px;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    position: relative;
+}
+
+#resume a:hover {
+    border-bottom: solid 3px rgba(0, 0, 0, 0);
+    top: 3px;
+}
+
 @media screen and (max-width: 1000px) {
 
     #landing {
         height: 800px;
+    }
+
+    #landing a {
+        display:none;
     }
 
     nav {

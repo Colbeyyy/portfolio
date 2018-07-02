@@ -459,11 +459,6 @@ section {
     width: 60%;
 }
 
-.project iframe {
-    position: relative;
-    left: 20%;
-}
-
 .project .awards-list img {
     width: 100px;
 }
